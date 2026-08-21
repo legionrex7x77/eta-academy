@@ -1,13 +1,4 @@
-/* ============================================================
-   curso.css — estilos adicionales para páginas de curso
-   (Kids / Teens / Youth / Adults / Online)
-   Se carga JUNTO a styles.css, después de él. Reutiliza las
-   variables y clases del sitio (--ink, --indigo, --yellow, .hero,
-   .btn, .section, .heading, .prices, .cta, footer...).
-   ============================================================ */
 
-/* Acento por curso: se define en <body class="course-XXXX">.
-   Cambia solo esta clase para replicar el patrón en otras páginas. */
 body.course-coral  { --course:#ff6265; --course-2:#ff8177; --course-soft:#fff1ef; --course-ink:#a3352e; }
 body.course-mint   { --course:#08a995; --course-2:#12cbb5; --course-soft:#eafbf8; --course-ink:#0a7b6c; }
 body.course-orange { --course:#e08900; --course-2:#ffb238; --course-soft:#fff6e6; --course-ink:#a4620a; }
