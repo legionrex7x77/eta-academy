@@ -1,0 +1,154 @@
+/* ============================================================
+   curso.css — estilos adicionales para páginas de curso
+   (Kids / Teens / Youth / Adults / Online)
+   Se carga JUNTO a styles.css, después de él. Reutiliza las
+   variables y clases del sitio (--ink, --indigo, --yellow, .hero,
+   .btn, .section, .heading, .prices, .cta, footer...).
+   ============================================================ */
+
+/* Acento por curso: se define en <body class="course-XXXX">.
+   Cambia solo esta clase para replicar el patrón en otras páginas. */
+body.course-coral  { --course:#ff6265; --course-2:#ff8177; --course-soft:#fff1ef; --course-ink:#a3352e; }
+body.course-mint   { --course:#08a995; --course-2:#12cbb5; --course-soft:#eafbf8; --course-ink:#0a7b6c; }
+body.course-orange { --course:#e08900; --course-2:#ffb238; --course-soft:#fff6e6; --course-ink:#a4620a; }
+body.course-violet { --course:#5547bc; --course-2:#7064dc; --course-soft:#f1efff; --course-ink:#3c3384; }
+body.course-purple { --course:#6e30cf; --course-2:#8b4ce5; --course-soft:#f6efff; --course-ink:#54228f; }
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 800;
+  opacity: .85;
+}
+.back-link:hover { color: var(--yellow); opacity: 1; }
+
+/* Hero variante por curso, reemplaza el gradiente indigo del hero global */
+.hero.hero--course {
+  background:
+    radial-gradient(circle at 75% 25%, color-mix(in srgb, var(--course) 45%, transparent) 0, transparent 32%),
+    linear-gradient(130deg, var(--course-ink), var(--course) 65%, var(--course-ink));
+  min-height: 600px;
+}
+.hero--course .eyebrow {
+  color: #fff;
+  background: rgba(255,255,255,.18);
+  padding: 6px 14px;
+  border-radius: 999px;
+}
+.hero--course h1 em { color: #ffe8a3; }
+.hero--course .btn { background: #fff; color: var(--course-ink); }
+.hero--course .btn:hover { background: #ffe8a3; }
+
+.course-facts {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+  margin: 26px 0 30px;
+}
+.course-facts div { display: flex; flex-direction: column; }
+.course-facts strong { font-size: 22px; color: #ffe8a3; }
+.course-facts span {
+  font-size: 11px;
+  letter-spacing: .06em;
+  color: #e9e7ff;
+  opacity: .85;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.mascot-card {
+  width: min(300px, 80%);
+  aspect-ratio: 1/1;
+  margin-inline: auto;
+  background: #fff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 96px;
+  box-shadow: 0 24px 50px #00000030;
+  position: relative;
+}
+.mascot-card .tag {
+  position: absolute;
+  bottom: 6%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--course-ink);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 8px 16px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+/* Bloques de contenido (propósito, incluye) */
+.purpose {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+.purpose article {
+  display: flex;
+  gap: 16px;
+  padding: 22px;
+  border: 1px solid #ece9fb;
+  border-radius: 18px;
+}
+.purpose article > b {
+  flex: 0 0 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: var(--course-soft);
+  color: var(--course-ink);
+  font-size: 22px;
+}
+.purpose h3 { margin: 0 0 6px; font-size: 16px; }
+.purpose p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.6; }
+
+.levels { display: flex; gap: 16px; flex-wrap: wrap; }
+.levels .level {
+  flex: 1;
+  min-width: 150px;
+  text-align: center;
+  padding: 22px;
+  border: 1px solid #ece9fb;
+  border-radius: 16px;
+}
+.levels .level strong { display: block; font-size: 22px; color: var(--course-ink); }
+.levels .level span { font-size: 12px; color: var(--muted); font-weight: 700; }
+
+.includes-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+.includes-grid li { display: flex; gap: 10px; font-weight: 700; font-size: 14px; }
+.includes-grid li::before { content: "✓"; color: var(--course-ink); font-weight: 900; }
+
+.faq-course details { border-bottom: 1px solid #ece9fb; padding: 18px 0; }
+.faq-course summary {
+  cursor: pointer;
+  list-style: none;
+  font-weight: 800;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.faq-course summary::-webkit-details-marker { display: none; }
+.faq-course summary::after { content: "+"; color: var(--course-ink); font-size: 20px; }
+.faq-course details[open] summary::after { content: "–"; }
+.faq-course p { margin: 10px 0 0; color: var(--muted); font-size: 14px; max-width: 65ch; }
+
+@media (max-width: 900px) {
+  .purpose, .includes-grid { grid-template-columns: 1fr; }
+  .hero.hero--course { min-height: auto; padding-bottom: 40px; }
+}
