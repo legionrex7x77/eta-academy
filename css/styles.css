@@ -55,10 +55,12 @@ a {
   font-weight: 700;
   letter-spacing: 0.38em;
 }
-.brand b {
-  font-size: 27px;
-  letter-spacing: 0.08em;
+.brand img {
+  height: 40px;
+  width: auto;
+  display: block;
 }
+
 .links {
   display: flex;
   gap: 31px;
