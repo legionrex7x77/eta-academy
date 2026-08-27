@@ -61,6 +61,17 @@ a {
   display: block;
 }
 
+.nav .brand {
+  display: flex;
+  align-items: center;
+}
+
+.brand img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
 .links {
   display: flex;
   gap: 31px;
