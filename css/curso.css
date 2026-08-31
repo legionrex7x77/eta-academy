@@ -149,7 +149,7 @@ body.course-purple { --course:#6e30cf; --course-2:#8b4ce5; --course-soft:#f6efff
 
 /* Controla el tamaño del icono si es una etiqueta <img> */
 .game img {
-  width: 80px;
+  width: 100px;
   height: auto;
   display: block;
 }
