@@ -1,0 +1,71 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f4f8;
+}
+
+main {
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 0.5rem;
+  color: #1e293b;
+}
+
+#status {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+}
+
+/* 3x3 CSS GRID BOARD */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.cell {
+  background-color: #ffffff;
+  border: 2px solid #334155;
+  border-radius: 8px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.2s;
+}
+
+.cell:hover {
+  background-color: #e2e8f0;
+}
+
+#reset-btn {
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#reset-btn:hover {
+  background-color: #1d4ed8;
+}
