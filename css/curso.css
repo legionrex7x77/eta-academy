@@ -122,13 +122,36 @@ body.course-purple { --course:#6e30cf; --course-2:#8b4ce5; --course-soft:#f6efff
   gap: 14px;
 }
 
-.game
-{
-  text-align: center;
-  min-width: none;
-  padding: 20px;
-  border: 1px solid ;
+.game {
+  /* Ancho compacto y centrado */
+  max-width: 400px;          /* O usa: width: fit-content; */
+  margin: 1.5rem auto;       /* Centra la tarjeta horizontalmente con margen moderado */
+  
+  /* Grid interno para alinear icono y texto */
+  display: grid;
+  justify-items: center;    /* Centra el icono y el texto horizontalmente */
+  align-items: center;
+  gap: 0.5rem;              /* Controla la distancia exacta entre el icono y el texto */
+  
+  /* Relleno interno y bordes */
+  padding: 1rem 1.5rem;      /* Espacio interno compacto */
+  border: 1px solid #d1d5db;
   border-radius: 16px;
+  text-align: center;
+}
+
+/* Quita el margen por defecto que traen las etiquetas <p> o <h2> */
+.game p,
+.game h2,
+.game h3 {
+  margin: 0;
+}
+
+/* Controla el tamaño del icono si es una etiqueta <img> */
+.game img {
+  width: 80px;
+  height: auto;
+  display: block;
 }
 
 .includes-grid li { display: flex; gap: 10px; font-weight: 700; font-size: 14px; }
